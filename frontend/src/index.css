@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Định nghĩa màu sắc riêng của đồ án */
+@theme {
+  --color-primary: #16a34a; /* Xanh lá chuẩn, mát mắt */
+  --color-secondary: #374151; /* Xám đậm cho chữ để dễ đọc trên nền trắng */
+}
+
+body {
+  background-color: #ffffff; /* Nền trắng tinh khôi theo yêu cầu */
+  color: var(--color-secondary);
+}
