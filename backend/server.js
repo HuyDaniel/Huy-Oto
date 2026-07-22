@@ -3,6 +3,7 @@ dns.setServers(['1.1.1.1', '1.0.0.1']);
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 const connectDB = require('./config/db');
 const { errorHandler, notFound } = require('./middlewares/errorMiddleware');
@@ -25,8 +26,15 @@ app.use('/api/orders', require('./routes/orderRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
 
 // Route kiểm tra trạng thái hoạt động của Server (Health Check)
-app.get('/', (req, res) => {
+app.get('/api/health', (req, res) => {
     res.send('API phụ tùng ô tô đang vận hành ổn định...');
+});
+
+// 🟢 PHẦN TÍCH HỢP ĐỂ RENDER CHẠY FULLSTACK (FRONTEND + BACKEND)
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 app.use(notFound);
