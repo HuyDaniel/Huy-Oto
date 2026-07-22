@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const axiosClient = axios.create({
-    // Đường dẫn gốc tới Backend
-    baseURL: 'http://localhost:5000/api',
+    // Tự động lấy link API chuẩn chỉnh cho cả online lẫn offline
+    baseURL: import.meta.env.VITE_API_URL || 'https://huy-oto.onrender.com/api',
     headers: {
         'Content-Type': 'application/json',
     },
