@@ -29,7 +29,9 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.get('/api/health', (req, res) => {
     res.send('API phụ tùng ô tô đang vận hành ổn định...');
 });
-
+app.get('/', (req, res) => {
+    res.send('API Backend Huy-Oto đang hoạt động ổn định!');
+});
 app.use(notFound);
 app.use(errorHandler);
 
