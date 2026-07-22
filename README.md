@@ -1,10 +1,10 @@
-# 🚗 HUY AUTO PARTS - MERN STACK E-COMMERCE
+# HUY AUTO PARTS - MERN STACK E-COMMERCE
 
 Hệ thống thương mại điện tử chuyên cung cấp phụ tùng và linh kiện ô tô chính hãng (Brembo, Denso, Bosch, Motul, K&N...). Dự án được xây dựng dựa trên nền tảng **MERN Stack** (MongoDB, Express.js, React.js, Node.js) với giao diện hiện đại sử dụng **Tailwind CSS**.
 
 ---
 
-## ✨ Các Tính Năng Nổi Bật
+## Các Tính Năng Nổi Bật
 
 * **Trang chủ & Bộ lọc thông minh**:
 * Banner trượt (Carousel) tự động chạy kèm nút bấm điều hướng nhanh.
@@ -49,7 +49,7 @@ Hệ thống thương mại điện tử chuyên cung cấp phụ tùng và linh
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Chạy Dự Án
+## Hướng Dẫn Cài Đặt & Chạy Dự Án
 
 ### 1. Clone dự án về máy
 
