@@ -4,8 +4,8 @@ const orderSchema = mongoose.Schema(
     {
         user: {
             type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: 'User', // Liên kết với bảng User để biết ai mua
+            required: false, // 🟢 Đổi thành FALSE để khách không có tài khoản vẫn mua được
+            ref: 'User', 
         },
         orderItems: [
             {
@@ -15,7 +15,7 @@ const orderSchema = mongoose.Schema(
                 product: {
                     type: mongoose.Schema.Types.ObjectId,
                     required: true,
-                    ref: 'Product', // Liên kết với sản phẩm để trừ kho
+                    ref: 'Product', 
                 },
             },
         ],
@@ -31,11 +31,11 @@ const orderSchema = mongoose.Schema(
         status: {
             type: String,
             required: true,
-            default: 'Pending', // Các trạng thái: Pending, Processing, Shipped, Delivered, Cancelled
+            default: 'Pending', 
         },
     },
     {
-        timestamps: true, // Tự động thêm ngày tạo đơn (createdAt)
+        timestamps: true, 
     }
 );
 

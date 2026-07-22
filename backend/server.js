@@ -22,6 +22,7 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/categories', require('./routes/categoryRoutes'));
 app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 
 // Route kiểm tra trạng thái hoạt động của Server (Health Check)
 app.get('/', (req, res) => {
