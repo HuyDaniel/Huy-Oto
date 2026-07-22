@@ -30,13 +30,6 @@ app.get('/api/health', (req, res) => {
     res.send('API phụ tùng ô tô đang vận hành ổn định...');
 });
 
-// 🟢 PHẦN TÍCH HỢP ĐỂ RENDER CHẠY FULLSTACK (FRONTEND + BACKEND)
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
-
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
-});
-
 app.use(notFound);
 app.use(errorHandler);
 
